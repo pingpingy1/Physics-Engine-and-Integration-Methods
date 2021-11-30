@@ -4,10 +4,10 @@ final int seed = 0;
 final float prob = 0.1, maxFluc = 0.1;
 int frames = 2000;
 
-float springConst = 8, inverseMass = 1;
+float springConst = 8, inverseMass = 1, rotRadius = 100;
 float angularFreq = sqrt(springConst * inverseMass);
-PVector pos0 = new PVector(300, 150);
-PVector vel0 = new PVector(20, -100);
+PVector pos0 = new PVector(200 + rotRadius, 150);
+PVector vel0 = new PVector(0, rotRadius * angularFreq);
 
 ExplicitEulerParticle e1;
 SympleticEulerParticle s1;
